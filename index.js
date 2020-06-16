@@ -45,4 +45,4 @@ io.on('connection', socket => {
 // @ts-ignore
 app.use(express.static(path.join( __dirname, 'public')))
 
-server.listen(3000, () => console.log('Server started at port: 3000'))
+server.listen(process.env.PORT || 3000, () => console.log('Server started at port: 3000'))
