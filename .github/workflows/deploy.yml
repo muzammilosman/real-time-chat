@@ -15,9 +15,6 @@ jobs:
       steps: 
         - name: Checkout
           uses: actions/checkout@v1
-
-        - name: Add remote origin
-          run: git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
-
+          
         - name: Deploy backend to heroku
-          run: git push heroku master
+          run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
