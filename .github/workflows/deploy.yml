@@ -20,7 +20,7 @@ jobs:
           run: git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
 
         - name: Commit the files
-          run: git commit -m "Pipeline initiated"
+          run: git commit -m "Pipeline recnfig"
 
         - name: Deploy backend to heroku
           run: git push heroku master
